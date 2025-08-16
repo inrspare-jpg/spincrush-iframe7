@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spin Crush Features</title>
+<style>
+  body {
+    margin:0;
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:#1f1f1f;
+    color:#e0e0e0;
+    overflow-x:hidden;
+  }
+
+  .background-animation {
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    pointer-events:none;
+    z-index:0;
+  }
+  .circle {
+    position:absolute;
+    width:200px;
+    height:200px;
+    background:rgba(0,255,136,0.08);
+    border-radius:50%;
+    filter:blur(15px);
+    animation:moveCircle 6s linear infinite;
+  }
+  .circle:nth-child(2){ animation-delay:2s; }
+  .circle:nth-child(3){ animation-delay:4s; }
+
+  @keyframes moveCircle {
+    0% { transform:translate(-200px, 20%); }
+    50% { transform:translate(100vw, 60%); }
+    100% { transform:translate(-200px, 20%); }
+  }
+
+  .container {
+    max-width:960px;
+    margin:0 auto;
+    padding:20px;
+    position:relative;
+    z-index:1;
+  }
+
+  .logo-container {
+    position:relative;
+    width:180px;
+    margin:auto;
+  }
+  .logo {
+    width:100%;
+    display:block;
+    filter:drop-shadow(0 0 12px #00ff88);
+    animation: pulse 2s infinite, lightning 5s infinite;
+    border-radius:15px;
+    position:relative;
+    z-index:2;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); filter: drop-shadow(0 0 12px #00ff88); }
+    50% { transform: scale(1.05); filter: drop-shadow(0 0 20px #00ff88); }
+    100% { transform: scale(1); filter: drop-shadow(0 0 12px #00ff88); }
+  }
+  @keyframes lightning {
+    0%,90%,100% { filter: drop-shadow(0 0 12px #00ff88); }
+    92% { filter: drop-shadow(0 0 40px #ffffff); }
+    94% { filter: drop-shadow(0 0 20px #ffffff); }
+    96% { filter: drop-shadow(0 0 40px #ffffff); }
+    98% { filter: drop-shadow(0 0 12px #00ff88); }
+  }
+  @keyframes rotateRing {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  h1 { text-align:center; font-size:36px; color:#00ff88; margin-bottom:10px; }
+  p.intro { text-align:center; font-size:18px; max-width:700px; margin:auto; line-height:1.6; }
+
+  .feature {
+    display:flex;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+    padding:30px 0;
+  }
+  .feature:nth-child(even) { flex-direction:row-reverse; }
+  .feature img {
+    width:280px;
+    border-radius:15px;
+    box-shadow:0 0 25px rgba(0,255,136,0.5);
+  }
+  .feature h2 { color:#00ff88; margin-top:0; font-size:26px; }
+  .feature p { font-size:16px; line-height:1.6; }
+
+  a.download-btn {
+    display:inline-block;
+    background:#00ff88;
+    color:#1f1f1f;
+    font-size:24px;
+    font-weight:bold;
+    padding:20px 60px;
+    border-radius:15px;
+    text-decoration:none;
+    box-shadow:0 10px 30px rgba(0,255,136,0.6);
+    transition:all 0.3s ease;
+    margin-top:40px;
+  }
+  a.download-btn:hover {
+    background:#00e67a;
+    box-shadow:0 12px 35px rgba(0,255,136,0.7);
+    transform: translateY(-3px);
+  }
+
+  @media (max-width:640px){
+    .feature { flex-direction:column !important; text-align:center; }
+    .feature:nth-child(even) { flex-direction:column !important; }
+    .feature img { width:90% !important; margin:auto; }
+    .feature h2 { font-size:24px; }
+    .feature p { font-size:16px; }
+    a.download-btn { font-size:20px; padding:18px 40px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="background-animation">
+    <div class="circle" style="top:10%; left:-200px;"></div>
+    <div class="circle" style="top:50%; left:-200px;"></div>
+    <div class="circle" style="top:80%; left:-200px;"></div>
+  </div>
+
+  <div class="container">
+    <div class="logo-container">
+      <div class="halo"></div>
+      <img src="https://new.heliusnew.com/uploads/image/20250813/1755065939953469.png" alt="Spin Crush Logo" class="logo">
+    </div>
+
+    <h1>Experience Spin Crush Features</h1>
+    <p class="intro">Spin, play, and win with exciting games!<br>
+     Daily bonuses, jackpots, and endless fun await you!</p>
+
+    <div class="feature">
+      <img src="https://new.heliusnew.com/uploads/image/20250816/1755351933592350.jpg" alt="Login">
+      <div>
+        <h2>Login Gift</h2>
+        <p>Log in daily to claim your Daily Login Gift and keep the streak going for even bigger rewards.</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <img src="https://new.heliusnew.com/uploads/image/20250816/1755351976240425.jpg" alt="Lucky Gullak">
+      <div>
+        <h2>Lucky Gullak</h2>
+        <p>Enjoy 24 hours of non-stop rewards with Lucky Gullak, stay active so you never miss a prize drop.</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <img src="https://new.heliusnew.com/uploads/image/20250816/1755352008261903.jpg" alt="Lucky Wheels">
+      <div>
+        <h2>Lucky Wheels</h2>
+        <p>Spin the Lucky Wheel every day for a chance to win cash, bonus credits, free spins, or deposit vouchers.</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <img src="https://new.heliusnew.com/uploads/image/20250816/1755352054823682.jpg" alt="Jackpot">
+      <div>
+        <h2>Jackpot</h2>
+        <p>Enter the Jackpot Event and compete for massive prizes with hourly, daily, weekly, and monthly jackpots.</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <img src="https://new.heliusnew.com/uploads/image/20250816/1755352074921114.jpg" alt="Jackpot">
+      <div>
+        <h2>Leaderboard</h2>
+        <p>Rise to the top and grab the ultimate bonuses every day, week, and month!</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;">
+      <a href="https://d35xoc2ezi3ki5.cloudfront.net/safe_spincrush.apk" class="download-btn">Download Now</a>
+    </div>
+  </div>
+
+</body>
+</html>
